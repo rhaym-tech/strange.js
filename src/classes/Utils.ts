@@ -15,24 +15,24 @@ export default class {
         const endpoint = new URL(`${baseUrl}/utils/circle`);
         endpoint.searchParams.append("image", image);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        return response.buffer;
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 
     async color(code: string) {
         const endpoint = new URL(`${baseUrl}/utils/color`);
         endpoint.searchParams.append("code", code);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        return response.buffer;
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 
     async denoise(image: string) {
         const endpoint = new URL(`${baseUrl}/utils/denoise`);
         endpoint.searchParams.append("image", image);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        return response.buffer;
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 
     async farewellCard(options: GreetingCardOptions) {
@@ -44,8 +44,8 @@ export default class {
         if (options.guild)         endpoint.searchParams.append("guild", options.guild);
         if (options.name)          endpoint.searchParams.append("name", options.name);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        return response.buffer;
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 
     async rankCard(options: RankCardOptions) {
@@ -63,8 +63,8 @@ export default class {
         if(options.backgroundImage) endpoint.searchParams.append("bgImage", options.backgroundImage);
         if(options.backgroundColor) endpoint.searchParams.append("bgColor", options.backgroundColor);
         
-        const response = await getBuffer(endpoint.href, this.opts);
-        return response.buffer;
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 
     async spotifyCard(options: SpotifyCardOptions) {
@@ -77,8 +77,8 @@ export default class {
         endpoint.searchParams.append("end", options.end.toString());
         endpoint.searchParams.append("title", options.title);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        return response.buffer;
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 
     async welcomeCard(options: GreetingCardOptions) {
@@ -90,8 +90,8 @@ export default class {
         if (options.guild)         endpoint.searchParams.append("guild", options.guild);
         if (options.name)          endpoint.searchParams.append("name", options.name);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        return response.buffer;
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 }
 

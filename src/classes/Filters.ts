@@ -21,11 +21,7 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("level", level.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
     }
 
     async brighten(image: string, amount: number) {
@@ -33,11 +29,8 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("amount", amount.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
+
     }
 
     /**
@@ -50,11 +43,8 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("level", level.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
+
     }
 
     async darken(image: string, amount: number) {
@@ -62,22 +52,15 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("amount", amount.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
     }
 
     async deepfry(image: string) {
         const endpoint = new URL(`${baseUrl}/filters/blur`);
         endpoint.searchParams.append("image", image);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
+
     }
 
     /**
@@ -90,33 +73,22 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("level", level.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
+      
     }
 
     async greyscale(image: string) {
         const endpoint = new URL(`${baseUrl}/filters/greyscale`);
         endpoint.searchParams.append("image", image);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
     }
 
     async invert(image: string) {
         const endpoint = new URL(`${baseUrl}/filters/invert`);
         endpoint.searchParams.append("image", image);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
     }
 
     async pixelate(image: string, pixels: number) {
@@ -124,22 +96,14 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("pixels", pixels.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
     }
 
     async sepia(image: string) {
         const endpoint = new URL(`${baseUrl}/filters/sepia`);
         endpoint.searchParams.append("image", image);
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
     }
 
     /**
@@ -152,11 +116,7 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("level", level.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
     }
 
     /**
@@ -169,10 +129,7 @@ export default class {
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("amount", amount.toString());
 
-        const response = await getBuffer(endpoint.href, this.opts);
-        if(response.success)
-            return response.buffer
-        else
-            throw new Error("Error accorded while generating image, failed with error: " + response.status);
+        return await getBuffer(endpoint.href, this.opts);
+        
     }
 }
