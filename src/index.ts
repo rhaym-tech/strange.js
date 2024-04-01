@@ -15,10 +15,6 @@ class StrangeImage {
     generators: Generators;
     overlays: Overlays;
     utils: Utils;
-
-    test() {
-        console.log("Hello world");
-    }
 }
 
 export {StrangeImage};
