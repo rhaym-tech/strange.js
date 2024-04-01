@@ -10,10 +10,7 @@
     }, 
     "include": [
       "src/*.ts",
-      "src/structures/*.ts",
-      "src/typing/types.d.ts",
-    ],
-    "exclude": [
-      "src/test.ts"
+      "src/classes/*.ts",
+      "src/utils/*.ts"
     ]
 }
