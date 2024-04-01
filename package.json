@@ -1,0 +1,36 @@
+{
+  "name": "strange.js",
+  "version": "0.0.1-beta-1",
+  "baseUrl": "https://strangeapi.hostz.me/api",
+  "description": "Strange API Wrapper for JavaScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhaym-tech/strange.js.git"
+  },
+  "keywords": [
+    "Image",
+    "ImageAPI",
+    "API",
+    "API",
+    "Wrapper",
+    "Wrapper",
+    "Typescript",
+    "Javascript",
+    "node",
+    "bun"
+  ],
+  "author": "Rhaym",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rhaym-tech/strangejs/issues"
+  },
+  "homepage": "https://github.com/rhaym-tech/strangejs#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "typescript": "^5.4.3"
+  }
+}
