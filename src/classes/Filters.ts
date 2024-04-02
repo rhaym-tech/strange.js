@@ -5,8 +5,8 @@ import {getBuffer} from "../utils/getBuffer";
 /**
  * Applies filters to a given image url
  * @example
- * const image = new StrangeImage('Strange API token')
- * const blurredImage = image.filters.blur('Image Url', 6)
+ * const image = new StrangeFilters('Strange API token')
+ * const blurredImage = await image.blur('Image Url', 6)
  */
 export class Filters {
     private opts;
@@ -37,7 +37,7 @@ export class Filters {
      * @param amount Brightness amount
      */
     async brighten(image: string, amount?: number) {
-        const endpoint = new URL(`${baseUrl}/filters/blur`);
+        const endpoint = new URL(`${baseUrl}/filters/brighten`);
         endpoint.searchParams.append("image", image);
         if (amount) endpoint.searchParams.append("amount", amount.toString());
 
@@ -51,7 +51,7 @@ export class Filters {
      * @param level Burn intensity
      */
     async burn(image: string, level?: number) {
-        const endpoint = new URL(`${baseUrl}/filters/blur`);
+        const endpoint = new URL(`${baseUrl}/filters/burn`);
         endpoint.searchParams.append("image", image);
         if (level) endpoint.searchParams.append("level", level.toString());
         
@@ -65,7 +65,7 @@ export class Filters {
      * @param amount Darkness amount
      */
     async darken(image: string, amount?: number) {
-        const endpoint = new URL(`${baseUrl}/filters/blur`);
+        const endpoint = new URL(`${baseUrl}/filters/darken`);
         endpoint.searchParams.append("image", image);
         if (amount) endpoint.searchParams.append("amount", amount.toString());
         return await getBuffer(endpoint.href, this.opts);
@@ -76,7 +76,7 @@ export class Filters {
      * @param image The image url
      */
     async deepfry(image: string) {
-        const endpoint = new URL(`${baseUrl}/filters/blur`);
+        const endpoint = new URL(`${baseUrl}/filters/deepfry`);
         endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
@@ -89,7 +89,7 @@ export class Filters {
      * @param level The level of distortion
      */
     async distort(image: string, level: number) {
-        const endpoint = new URL(`${baseUrl}/filters/blur`);
+        const endpoint = new URL(`${baseUrl}/filters/distort`);
         endpoint.searchParams.append("image", image);
         endpoint.searchParams.append("level", level.toString());
 

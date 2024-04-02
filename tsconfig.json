@@ -16,7 +16,7 @@
     "typedocOptions": {
         "entryPoints": ["src"],
         "out": "docs",
-        "plugin": ["typedoc-material-theme", "typedoc-plugin-missing-exports"],
+        "plugin": ["typedoc-material-theme", "typedoc-plugin-missing-exports", "typedoc-plugin-mdn-links"],
         "visibilityFilters": {
           "protected": false,
           "inherited": true,

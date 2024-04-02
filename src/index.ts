@@ -5,7 +5,7 @@ import { Filters, Generators, Overlays, Utils } from "./classes";
  * @example
  * // Example usage
  * const image = new StrangeImage('Strange API token')
- * const blurredImage = image.filters.blur('Image Url', 6)
+ * const blurredImage = await image.filters.blur('Image Url', 6)
  */
 class StrangeImage {
 

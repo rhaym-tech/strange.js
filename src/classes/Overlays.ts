@@ -5,8 +5,8 @@ import {getBuffer} from "../utils/getBuffer";
 /**
  * Various Image Overlays
  * @example
- * const image = new StrangeImage('Strange API token')
- * const approve = image.overlays.approve('Image Url')
+ * const image = new StrangeOverlays('Strange API token')
+ * const approve = await image.approve('Image Url')
  */
 export class Overlays {
     private opts;
