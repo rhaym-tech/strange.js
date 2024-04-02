@@ -1,7 +1,14 @@
-import getBuffer from '../utils/getBuffer';
+import {getBuffer} from '../utils/getBuffer';
 import { baseUrl } from "../../package.json";
 
-export default class Generators {
+
+/**
+ * Various Image Generators
+ * @example
+ * const image = new StrangeImage('Strange API token')
+ * const ad = image.generators.ad('Image Url')
+ */
+export class Generators {
     private opts;
 
     constructor(token: string) {

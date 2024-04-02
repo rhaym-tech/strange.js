@@ -12,5 +12,12 @@
       "src/*.ts",
       "src/classes/*.ts",
       "src/utils/*.ts"
-    ]
+    ],
+    "typedocOptions": {
+        "entryPoints": ["src"],
+        "out": "docs",
+        "plugin": ["typedoc-material-theme", "typedoc-plugin-missing-exports"],
+        "themeColor": "#cb9820",
+        "name": "StrangeImage"
+    }
 }

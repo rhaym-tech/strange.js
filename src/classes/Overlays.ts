@@ -1,7 +1,14 @@
 import {baseUrl} from "../../package.json";
-import getBuffer from "../utils/getBuffer";
+import {getBuffer} from "../utils/getBuffer";
 
-export default class {
+
+/**
+ * Various Image Overlays
+ * @example
+ * const image = new StrangeImage('Strange API token')
+ * const approve = image.overlays.approve('Image Url')
+ */
+export class Overlays {
     private opts;
     constructor(token: string) {
         this.opts = {

@@ -1,6 +1,6 @@
 import fetch, { RequestInit } from "node-fetch";
 
-export default async (url: string, options?: RequestInit): Promise<Buffer> => {
+export async function getBuffer(url: string, options?: RequestInit): Promise<Buffer> {
     try {
       const response = options ? await fetch(url, options) : await fetch(url);
       const buffer = await response.buffer();

@@ -1,7 +1,14 @@
 import {baseUrl} from "../../package.json";
-import getBuffer from "../utils/getBuffer";
+import {getBuffer} from "../utils/getBuffer";
 
-export default class {
+
+/**
+ * Various Image Utilities
+ * @example
+ * const image = new StrangeImage('Strange API token')
+ * const circledImage = image.utils.circle('Image Url')
+ */
+export class Utils {
     private opts;
     constructor(token: string) {
         this.opts = {

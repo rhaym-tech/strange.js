@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-docs": "npx typedoc"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,12 @@
   "homepage": "https://github.com/rhaym-tech/strangejs#readme",
   "dependencies": {
     "node-fetch": "^2.7.0",
+    "typedoc-material-theme": "^1.0.2",
+    "typedoc-plugin-missing-exports": "^2.2.0",
     "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.11",
+    "typedoc": "^0.25.12"
   }
 }
