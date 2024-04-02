@@ -24,7 +24,6 @@
     "node",
     "bun"
   ],
-
   "author": "Rhaym",
   "license": "Apache-2.0",
   "bugs": {
@@ -33,9 +32,12 @@
   "homepage": "https://github.com/rhaym-tech/strangejs#readme",
   "dependencies": {
     "node-fetch": "^2.7.0",
+    "typedoc-material-theme": "^1.0.2",
     "typescript": "^5.4.3"
   },
   "devDependencies": {
-    "@types/node-fetch": "^2.6.11"
+    "@types/node-fetch": "^2.6.11",
+    "typedoc": "^0.25.12",
+    "typedoc-plugin-missing-exports": "^2.2.0"
   }
 }
