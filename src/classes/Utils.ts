@@ -5,8 +5,8 @@ import {getBuffer} from "../utils/getBuffer";
 /**
  * Various Image Utilities
  * @example
- * const image = new StrangeImage('Strange API token')
- * const circledImage = image.utils.circle('Image Url')
+ * const image = new StrangeUtils('Strange API token')
+ * const circledImage = await image.circle('Image Url')
  */
 export class Utils {
     private opts;

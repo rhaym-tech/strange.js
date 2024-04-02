@@ -5,8 +5,8 @@ import { baseUrl } from "../../package.json";
 /**
  * Various Image Generators
  * @example
- * const image = new StrangeImage('Strange API token')
- * const ad = image.generators.ad('Image Url')
+ * const image = new StrangeGenerators('Strange API token')
+ * const ad = await image.ad('Image Url')
  */
 export class Generators {
     private opts;
