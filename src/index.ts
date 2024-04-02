@@ -17,5 +17,15 @@ class StrangeImage {
     utils: Utils;
 }
 
-export {StrangeImage};
+export {
+    Filters,    // Filters class
+    Generators, // Generators class
+    Overlays,   // Overlays class
+    Utils,      // Utils class
+
+    // Main Class
+    StrangeImage
+};
+
+// Export Main class by default
 export default StrangeImage;
