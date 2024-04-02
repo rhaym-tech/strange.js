@@ -17,6 +17,14 @@
         "entryPoints": ["src"],
         "out": "docs",
         "plugin": ["typedoc-material-theme", "typedoc-plugin-missing-exports"],
+        "visibilityFilters": {
+          "protected": false,
+          "inherited": true,
+          "private": false,
+          "external": false,
+          "@alpha": false,
+          "@beta": false
+        },
         "themeColor": "#6dfdf1",
         "name": "strange.js"
     }
