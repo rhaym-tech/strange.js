@@ -26,9 +26,7 @@ export class Filters {
     async blur(image: string, level?: number) {
         const endpoint = new URL(`${baseUrl}/filters/blur`);
         endpoint.searchParams.append("image", image);
-        if (level) {
-        endpoint.searchParams.append("level", level.toString());
-        }
+        if (level) endpoint.searchParams.append("level", level.toString());
 
         return await getBuffer(endpoint.href, this.opts);
     }
@@ -41,9 +39,7 @@ export class Filters {
     async brighten(image: string, amount?: number) {
         const endpoint = new URL(`${baseUrl}/filters/blur`);
         endpoint.searchParams.append("image", image);
-        if (amount) {
-        endpoint.searchParams.append("amount", amount.toString());
-        }
+        if (amount) endpoint.searchParams.append("amount", amount.toString());
 
         return await getBuffer(endpoint.href, this.opts);
 
@@ -57,9 +53,8 @@ export class Filters {
     async burn(image: string, level?: number) {
         const endpoint = new URL(`${baseUrl}/filters/blur`);
         endpoint.searchParams.append("image", image);
-        if (level) {
-        endpoint.searchParams.append("level", level.toString());
-        }
+        if (level) endpoint.searchParams.append("level", level.toString());
+        
         return await getBuffer(endpoint.href, this.opts);
 
     }
@@ -72,9 +67,7 @@ export class Filters {
     async darken(image: string, amount?: number) {
         const endpoint = new URL(`${baseUrl}/filters/blur`);
         endpoint.searchParams.append("image", image);
-        if (amount) {
-        endpoint.searchParams.append("amount", amount.toString());
-        }
+        if (amount) endpoint.searchParams.append("amount", amount.toString());
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -98,7 +91,7 @@ export class Filters {
     async distort(image: string, level: number) {
         const endpoint = new URL(`${baseUrl}/filters/blur`);
         endpoint.searchParams.append("image", image);
-        endpoint.searchParams.append("level", level?.toString());
+        endpoint.searchParams.append("level", level.toString());
 
         return await getBuffer(endpoint.href, this.opts);
       
@@ -134,9 +127,7 @@ export class Filters {
     async pixelate(image: string, pixels?: number) {
         const endpoint = new URL(`${baseUrl}/filters/pixelate`);
         endpoint.searchParams.append("image", image);
-        if (pixels) {
-        endpoint.searchParams.append("pixels", pixels.toString());
-        }
+        if (pixels) endpoint.searchParams.append("pixels", pixels.toString());
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -159,9 +150,8 @@ export class Filters {
     async sharpen(image: string, level?: number) {
         const endpoint = new URL(`${baseUrl}/filters/sharpen`);
         endpoint.searchParams.append("image", image);
-        if (level) {
-        endpoint.searchParams.append("level", level.toString());
-        }
+        if (level) endpoint.searchParams.append("level", level.toString());
+
         return await getBuffer(endpoint.href, this.opts);
     }
 
