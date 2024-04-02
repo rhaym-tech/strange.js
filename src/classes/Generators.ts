@@ -18,7 +18,11 @@ export class Generators {
             },
         }
     }
-
+    
+    /**
+     * Draws an image over Pokémon's "It's been 3000 years" meme
+     * @param image the image url
+     */
     async pokemon3000Years(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/3000-years`);
         endpoint.searchParams.append("image", image);
