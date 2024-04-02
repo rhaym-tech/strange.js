@@ -17,7 +17,7 @@
         "entryPoints": ["src"],
         "out": "docs",
         "plugin": ["typedoc-material-theme", "typedoc-plugin-missing-exports"],
-        "themeColor": "#cb9820",
-        "name": "StrangeImage"
+        "themeColor": "#6dfdf1",
+        "name": "strange.js"
     }
 }
