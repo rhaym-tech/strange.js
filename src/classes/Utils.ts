@@ -56,7 +56,7 @@ export class Utils {
     
     /**
      * Generates a farewell card
-     * @param options {@link GreetingCardOptions}
+     * @param options {@link GreetingCardOptions} - The options for Farewell card
      */
     async farewellCard(options: GreetingCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/farewell-card`);
@@ -73,7 +73,7 @@ export class Utils {
     
     /**
      * Generates a rank card
-     * @param options {@link RankCardOptions}
+     * @param options {@link RankCardOptions} - The options for Rank card
      */
     async rankCard(options: RankCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/rank-card`);
@@ -96,7 +96,7 @@ export class Utils {
     
     /**
      * Generates a spotify card 
-     * @param options {@link SpotifyCardOptions}
+     * @param options {@link SpotifyCardOptions} - The options for Spotify card
      */
     async spotifyCard(options: SpotifyCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/spotify-card`);
@@ -113,8 +113,8 @@ export class Utils {
     }
     
     /**
-     * Generates a welcome card
-     * @param options {@link GreetingCardOptions}
+     * Generates a Welcome card
+     * @param options {@link GreetingCardOptions} - The options for welcome card
      */
     async welcomeCard(options: GreetingCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/welcome-card`);
