@@ -1,6 +1,6 @@
 {
   "name": "strange.js",
-  "version": "0.0.1-beta-1",
+  "version": "1.0.0",
   "baseUrl": "https://strangeapi.hostz.me/api",
   "description": "Strange API Wrapper for JavaScript",
   "types": "dist/index.d.ts",
@@ -24,6 +24,7 @@
     "node",
     "bun"
   ],
+
   "author": "Rhaym",
   "license": "Apache-2.0",
   "bugs": {
