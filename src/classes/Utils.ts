@@ -1,7 +1,14 @@
 import {baseUrl} from "../../package.json";
-import getBuffer from "../utils/getBuffer";
+import {getBuffer} from "../utils/getBuffer";
 
-export default class {
+
+/**
+ * Various Image Utilities
+ * @example
+ * const image = new StrangeImage('Strange API token')
+ * const circledImage = image.utils.circle('Image Url')
+ */
+export class Utils {
     private opts;
     constructor(token: string) {
         this.opts = {
@@ -10,7 +17,11 @@ export default class {
             },
         }
     }
-
+    
+    /**
+     * Circles the provided image
+     * @param image the image url
+     */
     async circle(image: string) {
         const endpoint = new URL(`${baseUrl}/utils/circle`);
         endpoint.searchParams.append("image", image);
@@ -18,7 +29,11 @@ export default class {
         return await getBuffer(endpoint.href, this.opts);
         
     }
-
+    
+    /**
+     * Generates a color from hex color code
+     * @param code The hex color code
+     */
     async color(code: string) {
         const endpoint = new URL(`${baseUrl}/utils/color`);
         endpoint.searchParams.append("code", code);
@@ -26,7 +41,11 @@ export default class {
         return await getBuffer(endpoint.href, this.opts);
         
     }
-
+    
+    /**
+     * Denoise an image
+     * @param image the image url
+     */
     async denoise(image: string) {
         const endpoint = new URL(`${baseUrl}/utils/denoise`);
         endpoint.searchParams.append("image", image);
@@ -34,7 +53,11 @@ export default class {
         return await getBuffer(endpoint.href, this.opts);
         
     }
-
+    
+    /**
+     * Generates a farewell card
+     * @param options {@link GreetingCardOptions}
+     */
     async farewellCard(options: GreetingCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/farewell-card`);
         if (options.avatar)        endpoint.searchParams.append("avatar", options.avatar);
@@ -47,7 +70,11 @@ export default class {
         return await getBuffer(endpoint.href, this.opts);
         
     }
-
+    
+    /**
+     * Generates a rank card
+     * @param options {@link RankCardOptions}
+     */
     async rankCard(options: RankCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/rank-card`);
         endpoint.searchParams.append("", options.level.toString());
@@ -66,7 +93,11 @@ export default class {
         return await getBuffer(endpoint.href, this.opts);
         
     }
-
+    
+    /**
+     * Generates a spotify card 
+     * @param options {@link SpotifyCardOptions}
+     */
     async spotifyCard(options: SpotifyCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/spotify-card`);
 
@@ -80,7 +111,11 @@ export default class {
         return await getBuffer(endpoint.href, this.opts);
         
     }
-
+    
+    /**
+     * Generates a welcome card
+     * @param options {@link GreetingCardOptions}
+     */
     async welcomeCard(options: GreetingCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/welcome-card`);
         if (options.avatar)        endpoint.searchParams.append("avatar", options.avatar);

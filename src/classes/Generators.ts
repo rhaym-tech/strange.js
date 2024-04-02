@@ -1,7 +1,14 @@
-import getBuffer from '../utils/getBuffer';
+import {getBuffer} from '../utils/getBuffer';
 import { baseUrl } from "../../package.json";
 
-export default class Generators {
+
+/**
+ * Various Image Generators
+ * @example
+ * const image = new StrangeImage('Strange API token')
+ * const ad = image.generators.ad('Image Url')
+ */
+export class Generators {
     private opts;
 
     constructor(token: string) {
@@ -11,7 +18,11 @@ export default class Generators {
             },
         }
     }
-
+    
+    /**
+     * Draws an image over Pokémon's "It's been 3000 years" meme
+     * @param image the image url
+     */
     async pokemon3000Years(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/3000-years`);
         endpoint.searchParams.append("image", image);
@@ -59,6 +70,9 @@ export default class Generators {
     async challenger(image: string, silhouetted?: boolean) {
         const endpoint = new URL(`${baseUrl}/generators/challenger`);
         endpoint.searchParams.append("image", image);
+        if (silhouetted) {
+          endpoint.searchParams.append("silhouetted", silhouetted.toString())
+        }
         return await getBuffer(endpoint.href, this.opts);
     }
 

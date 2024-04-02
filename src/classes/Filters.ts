@@ -1,7 +1,14 @@
 import {baseUrl} from "../../package.json";
-import getBuffer from "../utils/getBuffer";
+import {getBuffer} from "../utils/getBuffer";
 
-export default class {
+
+/**
+ * Applies filters to a given image url
+ * @example
+ * const image = new StrangeImage('Strange API token')
+ * const blurredImage = image.filters.blur('Image Url', 6)
+ */
+export class Filters {
     private opts;
     constructor(token: string) {
         this.opts = {
