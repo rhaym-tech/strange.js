@@ -66,6 +66,9 @@ export class Generators {
     async challenger(image: string, silhouetted?: boolean) {
         const endpoint = new URL(`${baseUrl}/generators/challenger`);
         endpoint.searchParams.append("image", image);
+        if (silhouetted) {
+          endpoint.searchParams.append("silhouetted", silhouetted.toString())
+        }
         return await getBuffer(endpoint.href, this.opts);
     }
 
