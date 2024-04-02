@@ -40,10 +40,10 @@ class StrangeImage {
 }
 
 export {
-    Filters,    // Filters class
-    Generators, // Generators class
-    Overlays,   // Overlays class
-    Utils,      // Utils class
+    Filters as StrangeFilters,       // Filters class
+    Generators as StrangeGenerators, // Generators class
+    Overlays as StrangeOverlays,     // Overlays class
+    Utils as StrangeUtils,           // Utils class
 
     // Main Class
     StrangeImage
