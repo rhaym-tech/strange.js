@@ -1,5 +1,12 @@
 import { Filters, Generators, Overlays, Utils } from "./classes";
 
+/**
+ * An API Wrapper for Strange API, an image manipulator.
+ * @example
+ * // Example usage
+ * const image = new StrangeImage('Strange API token')
+ * const blurredImage = image.filters.blur('Image Url', 6)
+ */
 class StrangeImage {
 
     constructor(token: string) {

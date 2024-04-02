@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/rhaym-tech/strangejs#readme",
   "dependencies": {
+    "express": "^4.19.2",
     "node-fetch": "^2.7.0",
     "typedoc-material-theme": "^1.0.2",
     "typedoc-plugin-missing-exports": "^2.2.0",
