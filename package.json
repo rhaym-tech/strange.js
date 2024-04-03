@@ -1,7 +1,7 @@
 {
   "name": "strange.js",
   "description": "A solid library that simplifies interaction with Strange API, making image manipulation easier.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://strangeapi.hostz.me/api",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
