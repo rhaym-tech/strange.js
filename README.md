@@ -49,7 +49,7 @@ const fs = require("fs");
 
 #### Using Sub classes:
 ```js
-import {StrangeFilters, StrangeGenerators, StrangeOverlays, StrangeUtils} from "strange.js"; // for EJS and TS users
+import {StrangeFilters, StrangeGenerators, StrangeOverlays, StrangeUtils} from "strange.js"; // for ESM and TS users
 const {StrangeFilters, StrangeGenerators, StrangeOverlays, StrangeUtils} = require("strange-js"); // for Common.js users
 
 const fs = require("fs");
