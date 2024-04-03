@@ -1,5 +1,4 @@
-import fetch, { RequestInit } from "node-fetch";
-
+import fetch, { RequestInit, Response } from "node-fetch";
 
 /**
  * Returns a buffer from the given url
@@ -8,11 +7,14 @@ import fetch, { RequestInit } from "node-fetch";
  */
 export async function getBuffer(url: string, options?: RequestInit): Promise<Buffer> {
     try {
-      const response = options ? await fetch(url, options) : await fetch(url);
-      const buffer = await response.buffer();
-      if (response.status !== 200) throw new Error("Failed to fetch image buffer: " + response.statusText);
+        const response: Response = options ? await fetch(url, options) : await fetch(url);
+        if (!response.ok) {
+            const errorText = await response.json();
+            throw `${errorText.message}`;
+        }
+        const buffer = await response.buffer();
         return buffer;
     } catch (ex) {
-      throw new Error(`getBufferError: ` + ex);
+        throw new Error(`getBufferError: ${ex}`);
     }
 }
