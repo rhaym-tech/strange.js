@@ -8,8 +8,8 @@
 
 
 ### Useful links
-**Documentations**: TBD <br>
-**Support Server**: [join](https://discord.gg/Cv3FbdXCtY)
+**Documentations**: [Here](https://strangejs-docs.rhaym-tech.me/classes/strangeimage)<br>
+**Support Server**: [Join](https://discord.gg/Cv3FbdXCtY)
 
 #### Usage
 > [!IMPORTANT]  
@@ -32,7 +32,7 @@ const fs = require("fs");
 })();
 ```
 
-#### EJS and TypeScript:
+#### ESM and TypeScript:
 ```js
 import StrangeImage from "strange.js"; // can be imported by default
 
@@ -49,7 +49,7 @@ const fs = require("fs");
 
 #### Using Sub classes:
 ```js
-import {StrangeFilters, StrangeGenerators, StrangeOverlays, StrangeUtils} from "strange.js"; // for EJS and TS users
+import {StrangeFilters, StrangeGenerators, StrangeOverlays, StrangeUtils} from "strange.js"; // for ESM and TS users
 const {StrangeFilters, StrangeGenerators, StrangeOverlays, StrangeUtils} = require("strange-js"); // for Common.js users
 
 const fs = require("fs");
