@@ -8,8 +8,8 @@
 
 
 ### Useful links
-**Documentations**: TBD <br>
-**Support Server**: [join](https://discord.gg/Cv3FbdXCtY)
+**Documentations**: [Here](https://strangejs-docs.rhaym-tech.me/classes/strangeimage)<br>
+**Support Server**: [Join](https://discord.gg/Cv3FbdXCtY)
 
 #### Usage
 > [!IMPORTANT]  
