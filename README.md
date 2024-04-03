@@ -32,7 +32,7 @@ const fs = require("fs");
 })();
 ```
 
-#### EJS and TypeScript:
+#### ESM and TypeScript:
 ```js
 import StrangeImage from "strange.js"; // can be imported by default
 
