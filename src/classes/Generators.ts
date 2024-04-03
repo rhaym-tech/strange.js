@@ -25,7 +25,7 @@ export class Generators {
      */
     async pokemon3000Years(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/3000-years`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -35,7 +35,7 @@ export class Generators {
      */
     async ad(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/ad`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -45,7 +45,7 @@ export class Generators {
      */
     async affect(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/affect`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -56,8 +56,8 @@ export class Generators {
      */
     async batslap(image1: string, image2: string) {
         const endpoint = new URL(`${baseUrl}/generators/batslap`);
-        endpoint.searchParams.append("image1", image1);
-        endpoint.searchParams.append("image2", image2);
+        if(image1) endpoint.searchParams.append("image1", image1);
+        if(image2) endpoint.searchParams.append("image2", image2);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -67,7 +67,7 @@ export class Generators {
      */
     async beautiful(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/beautiful`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -78,8 +78,8 @@ export class Generators {
      */
     async bed(image1: string, image2: string) {
         const endpoint = new URL(`${baseUrl}/generators/bed`);
-        endpoint.searchParams.append("image1", image1);
-        endpoint.searchParams.append("image2", image2);
+        if(image1) endpoint.searchParams.append("image1", image1);
+        if(image2) endpoint.searchParams.append("image2", image2);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -89,7 +89,7 @@ export class Generators {
      */
     async bobross(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/bobross`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -100,7 +100,7 @@ export class Generators {
      */
     async challenger(image: string, silhouetted?: boolean) {
         const endpoint = new URL(`${baseUrl}/generators/challenger`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         if (silhouetted) {
           endpoint.searchParams.append("silhouetted", silhouetted.toString())
         }
@@ -113,7 +113,7 @@ export class Generators {
      */
     async changemymind(text: string) {
         const endpoint = new URL(`${baseUrl}/generators/changemymind`);
-        endpoint.searchParams.append("text", text);
+        if(text) if(text) endpoint.searchParams.append("text", text);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -123,7 +123,7 @@ export class Generators {
      */
     async clown(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/clown`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -133,7 +133,7 @@ export class Generators {
      */
     async clyde(text: string) {
         const endpoint = new URL(`${baseUrl}/generators/clyde`);
-        endpoint.searchParams.append("text", text);
+        if(text) endpoint.searchParams.append("text", text);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -143,7 +143,7 @@ export class Generators {
      */
     async confusedstonk(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/conusedstonk`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -153,7 +153,7 @@ export class Generators {
      */
     async delete(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/delete`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -165,9 +165,9 @@ export class Generators {
      */
     async demotivational(title: string, text: string, image: string) {
         const endpoint = new URL(`${baseUrl}/generators/demotivational`);
-        endpoint.searchParams.append("title", title);
-        endpoint.searchParams.append("text", text);
-        endpoint.searchParams.append("image", image);
+        if(title) endpoint.searchParams.append("title", title);
+        if(text) endpoint.searchParams.append("text", text);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -177,7 +177,7 @@ export class Generators {
      */
     async dexter(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/dexter`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -187,7 +187,7 @@ export class Generators {
      */
     async discordblack(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/discordblack`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -197,7 +197,7 @@ export class Generators {
      */
     async discordblue(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/discordblue`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -208,8 +208,8 @@ export class Generators {
      */
     async doublestonk(image1: string, image2: string) {
         const endpoint = new URL(`${baseUrl}/generators/doublestonk`);
-        endpoint.searchParams.append("image1", image1);
-        endpoint.searchParams.append("image2", image2);
+        if(image1) endpoint.searchParams.append("image1", image1);
+        if(image2) endpoint.searchParams.append("image2", image2);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -219,7 +219,7 @@ export class Generators {
      */
     async facepalm(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/facepalm`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -230,8 +230,8 @@ export class Generators {
      */
     async fusion(image1: string, image2: string) {
         const endpoint = new URL(`${baseUrl}/generators/fusion`);
-        endpoint.searchParams.append("image1", image1);
-        endpoint.searchParams.append("image2", image2);
+        if(image1) endpoint.searchParams.append("image1", image1);
+        if(image2) endpoint.searchParams.append("image2", image2);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -244,10 +244,10 @@ export class Generators {
      */
     async gruPlan(firstStep: string, secondStep: string, thirdStep: string, fourthStep: string) {
         const endpoint = new URL(`${baseUrl}/generators/gru-plan`);
-        endpoint.searchParams.append("firstStep", firstStep);
-        endpoint.searchParams.append("secondStep", secondStep);
-        endpoint.searchParams.append("thirdStep", thirdStep);
-        endpoint.searchParams.append("fourthStep", fourthStep);
+        if(firstStep) endpoint.searchParams.append("firstStep", firstStep);
+        if(secondStep) endpoint.searchParams.append("secondStep", secondStep);
+        if(thirdStep) endpoint.searchParams.append("thirdStep", thirdStep);
+        if(fourthStep) endpoint.searchParams.append("fourthStep", fourthStep);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -257,7 +257,7 @@ export class Generators {
      */
     async heartbreaking(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/heartbreaking`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -267,7 +267,7 @@ export class Generators {
      */
     async hitler(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/hitler`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -277,7 +277,7 @@ export class Generators {
      */
     async jail(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/jail`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -287,7 +287,7 @@ export class Generators {
      */
     async jokeoverhead(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/jokeoverhead`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -297,7 +297,7 @@ export class Generators {
      */
     async karaba(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/karaba`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -308,8 +308,8 @@ export class Generators {
      */
     async kiss(image1: string, image2: string)  {
         const endpoint = new URL(`${baseUrl}/generators/kiss`);
-        endpoint.searchParams.append("image1", image1);
-        endpoint.searchParams.append("image2", image2);
+        if(image1) endpoint.searchParams.append("image1", image1);
+        if(image2) endpoint.searchParams.append("image2", image2);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -319,7 +319,7 @@ export class Generators {
      */
     async kyonGun(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/kyon-gun`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -329,7 +329,7 @@ export class Generators {
      */
     async lisaPresentation(text: string) {
         const endpoint = new URL(`${baseUrl}/generators/lisa-presentation`);
-        endpoint.searchParams.append("text", text);
+        if(text) endpoint.searchParams.append("text", text);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -339,7 +339,7 @@ export class Generators {
      */
     async mikkelsen(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/mikkelsen`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -349,7 +349,7 @@ export class Generators {
      */
     async mirror(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/mirror`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -359,7 +359,7 @@ export class Generators {
      */
     async mms(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/mms`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -369,7 +369,7 @@ export class Generators {
      */
     async notstonk(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/ohno`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -379,7 +379,7 @@ export class Generators {
      */
     async ohno(text: string){
         const endpoint = new URL(`${baseUrl}/generators/notstonk`);
-        endpoint.searchParams.append("text", text);
+        if(text) endpoint.searchParams.append("text", text);
         return await getBuffer(endpoint.href, this.opts);
     } 
     
@@ -392,10 +392,10 @@ export class Generators {
      */
     async planktonPlant(firstStep: string, secondStep: string, thirdStep: string, fourthStep: string) {
         const endpoint = new URL(`${baseUrl}/generators/plankton-plan`);
-        endpoint.searchParams.append("firstStep", firstStep);
-        endpoint.searchParams.append("secondStep", secondStep);
-        endpoint.searchParams.append("thirdStep", thirdStep);
-        endpoint.searchParams.append("fourthStep", fourthStep);
+        if(firstStep) endpoint.searchParams.append("firstStep", firstStep);
+        if(secondStep) endpoint.searchParams.append("secondStep", secondStep);
+        if(thirdStep) endpoint.searchParams.append("thirdStep", thirdStep);
+        if(fourthStep) endpoint.searchParams.append("fourthStep", fourthStep);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -405,7 +405,7 @@ export class Generators {
      */
     async poutine(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/poutine`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -415,7 +415,7 @@ export class Generators {
      */
     async rip(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/rip`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -425,7 +425,7 @@ export class Generators {
      */
     async shit(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/shit`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -435,7 +435,7 @@ export class Generators {
      */
     async snyder(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/snyder`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -446,8 +446,8 @@ export class Generators {
      */
     async spank(image1: string, image2: string) {
         const endpoint = new URL(`${baseUrl}/generators/spank`);
-        endpoint.searchParams.append("image1", image1);
-        endpoint.searchParams.append("image2", image2);
+        if(image1) endpoint.searchParams.append("image1", image1);
+        if(image2) endpoint.searchParams.append("image2", image2);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -457,7 +457,7 @@ export class Generators {
      */
     async stonk(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/stonk`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -467,7 +467,7 @@ export class Generators {
      */
     async tattoo(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/tattoo`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -477,7 +477,7 @@ export class Generators {
      */
     async thomas(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/thomas`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -487,7 +487,7 @@ export class Generators {
      */
     async trash(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/trash`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -497,7 +497,7 @@ export class Generators {
      */
     async wanted(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/wanted`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -507,7 +507,7 @@ export class Generators {
      */
     async worthless(image: string) {
         const endpoint = new URL(`${baseUrl}/generators/worthless`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
         return await getBuffer(endpoint.href, this.opts);
     }
     
@@ -519,9 +519,9 @@ export class Generators {
      */
     async youtube(image: string, username: string, text: string) {
         const endpoint = new URL(`${baseUrl}/generators/youtube`);
-        endpoint.searchParams.append("image", image);
-        endpoint.searchParams.append("username", username);
-        endpoint.searchParams.append("text", text);
+        if(image) endpoint.searchParams.append("image", image);
+        if(username) endpoint.searchParams.append("username", username);
+        if(text) endpoint.searchParams.append("text", text);
         return await getBuffer(endpoint.href, this.opts);
     }
 }

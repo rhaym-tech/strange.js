@@ -24,7 +24,7 @@ export class Overlays {
      */
     async approve(image: string) {
       const endpoint = new URL(`${baseUrl}/overlays/approved`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
     }
@@ -35,7 +35,7 @@ export class Overlays {
      */
      async brazzers(image: string) {
        const endpoint = new URL(`${baseUrl}/overlays/brazzers`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
      }
@@ -45,7 +45,7 @@ export class Overlays {
      */
      async gay(image: string) {
        const endpoint = new URL(`${baseUrl}/overlays/gay`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
      }
@@ -55,7 +55,7 @@ export class Overlays {
      */
      async halloween(image: string) {
        const endpoint = new URL(`${baseUrl}/overlays/halloween`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
      }
@@ -67,7 +67,7 @@ export class Overlays {
      */
      async thugLife(image: string) {
        const endpoint = new URL(`${baseUrl}/overlays/thuglife`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
      }
@@ -78,7 +78,7 @@ export class Overlays {
      */
      async toBeContinued(image: string) {
        const endpoint = new URL(`${baseUrl}/overlays/to-be-continued`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
      }
@@ -89,7 +89,7 @@ export class Overlays {
      */
      async wasted(image: string) {
        const endpoint = new URL(`${baseUrl}/overlays/wasted`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
      }

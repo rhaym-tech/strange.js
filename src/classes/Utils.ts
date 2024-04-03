@@ -24,7 +24,7 @@ export class Utils {
      */
     async circle(image: string) {
         const endpoint = new URL(`${baseUrl}/utils/circle`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
         
@@ -36,7 +36,7 @@ export class Utils {
      */
     async color(code: string) {
         const endpoint = new URL(`${baseUrl}/utils/color`);
-        endpoint.searchParams.append("code", code);
+        if(code) endpoint.searchParams.append("code", code);
 
         return await getBuffer(endpoint.href, this.opts);
         
@@ -48,7 +48,7 @@ export class Utils {
      */
     async denoise(image: string) {
         const endpoint = new URL(`${baseUrl}/utils/denoise`);
-        endpoint.searchParams.append("image", image);
+        if(image) endpoint.searchParams.append("image", image);
 
         return await getBuffer(endpoint.href, this.opts);
         
@@ -77,8 +77,8 @@ export class Utils {
      */
     async rankCard(options: RankCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/rank-card`);
-        endpoint.searchParams.append("", options.level.toString());
 
+        if(options.level)           endpoint.searchParams.append("", options.level.toString());
         if(options.avatar)          endpoint.searchParams.append("avatar", options.avatar);
         if(options.currentXP)       endpoint.searchParams.append("currentxp", options.currentXP.toString());
         if(options.reqXP)           endpoint.searchParams.append("reqxp", options.reqXP.toString());
@@ -101,15 +101,14 @@ export class Utils {
     async spotifyCard(options: SpotifyCardOptions) {
         const endpoint = new URL(`${baseUrl}/utils/spotify-card`);
 
-        endpoint.searchParams.append("image", options.image);
-        endpoint.searchParams.append("author", options.author);
-        endpoint.searchParams.append("album", options.album);
-        endpoint.searchParams.append("start", options.start.toString());
-        endpoint.searchParams.append("end", options.end.toString());
-        endpoint.searchParams.append("title", options.title);
+        if(options.image)  endpoint.searchParams.append("image", options.image);
+        if(options.author) endpoint.searchParams.append("author", options.author);
+        if(options.album)  endpoint.searchParams.append("album", options.album);
+        if(options.start || options.start === 0)  endpoint.searchParams.append("start", options.start.toString());
+        if(options.end || options.start === 0)    endpoint.searchParams.append("end", options.end.toString());
+        if(options.title)  endpoint.searchParams.append("title", options.title);
 
-        return await getBuffer(endpoint.href, this.opts);
-        
+        return await getBuffer(endpoint.href, this.opts);  
     }
     
     /**
