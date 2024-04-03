@@ -3,7 +3,7 @@
 <br>
 <b> Strange.js<b>
 </h1>
-<h4 align="center">A wrapper for Strange API, a solid image manipulation library</h4>
+<h4 align="center">is a powerful library that simplifies interaction with Strange API, making image manipulation easier.</h4>
 <h3 align="center">Written in <img width=16 src="./assets/typescript-icon.svg"></img>TypeScript</h3>
 
 
